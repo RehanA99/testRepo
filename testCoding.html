@@ -1,20 +1,25 @@
 <DOCTYPE! html>
-  <html>
-    <head>
-      <script>
-        function passMe( name ) {
-          alert(name + " Wishes Happy BirthDay." ) ;
-        }
-      </script>
-      <title>BirthDay Greetings</title>
-    </head>
-    <body backgroud-color = "skyblue">
+<html>
+<head>
+<script type = "text/javascript">
+	function passMe( ) {
+		var wish = document.getElementById(Name) ;
+		if ( Name.value == "" ) {
+			alert( "Please type a Name you want to wish") ;
+		} else {
+			alert( "Happy BirthDay! " + Name.value ) ;
+		}
+	}
+</script>
+<title>BirthDay Greetings</title>
+</head>
+<body backgroud-color = "skyblue">
       <form>
-        <legend>Type Name</legend>
+        <legend>Wishing To</legend>
         <br><br>
-        <input type = "text" id = "name" name = "name">
+        <input type = "text" id = "Name" name = "Name">
         <br><br>
-        <input type = "submit" value = "Submit" onclick = "passMe(name.value)">
+        <input type = "submit" value = "Submit" onclick = "passMe()">
         <br><br>
       </form>
     </body>
